@@ -27,7 +27,7 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter @workspace/eva-fabrics-store run build
+      - run: pnpm --filter @workspace/sport-store run build
         env:
           PORT: 4174
           BASE_PATH: /${{ github.event.repository.name }}/
