@@ -52,7 +52,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build storefront
-        run: pnpm --filter @workspace/eva-fabrics-store build
+        run: pnpm --filter @workspace/sport-store build
 
       - name: Deploy Worker
         uses: cloudflare/wrangler-action@v3

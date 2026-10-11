@@ -31,13 +31,13 @@ const localPhone = (() => {
 const safeInstagram = /^https?:\/\//i.test(rawInstagram) ? rawInstagram : `https://${rawInstagram.replace(/^\/+/, '')}`
 
 export const siteConfig = {
-  get name() { return adminContent().shopName || 'إيفا ستور للأقمشة' },
-  shortName: 'إيفا ستور',
+  get name() { return adminContent().shopName || 'سبورت ستور' },
+  shortName: 'سبورت ستور',
   get phone() { return adminContent().phone || localPhone },
   get instagramUrl() { return adminContent().instagram || safeInstagram },
   get contactEmail() { return adminContent().emailOrdersTo || 'gdumingm@gmail.com' },
-  emailUrl: (subject = 'استفسار من متجر إيفا', body = 'مرحباً إيفا، أريد الاستفسار عن منتجاتكم.'): string => `mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
-  instagramText: 'إيفا ستور على إنستغرام',
+  emailUrl: (subject = 'استفسار من متجر سبورت', body = 'مرحباً، أريد الاستفسار عن منتجاتكم.'): string => `mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+  instagramText: 'سبورت ستور على إنستغرام',
 }
 
 export const apiUrl = (path: string): string => `${apiBase}${path.startsWith('/') ? path : `/${path}`}`

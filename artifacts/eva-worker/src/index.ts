@@ -45,7 +45,7 @@ const publicProduct = (product: StoreProduct): StoreProduct => {
 }
 
 const orderNumber = (): string =>
-  `EVA-${Date.now().toString(36).toUpperCase()}${Math.floor(Math.random() * 90 + 10)}`
+  `SPORT-${Date.now().toString(36).toUpperCase()}${Math.floor(Math.random() * 90 + 10)}`
 
 const fmtDinar = (value: number): string =>
   value >= 1000 && value % 1000 === 0 ? `${value / 1000} الف دينار عراقي` : `${value.toLocaleString('en-US')} دينار عراقي`

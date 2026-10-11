@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "www",
+  "name": "sport",
   "main": "src/index.ts",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat"],
@@ -12,11 +12,11 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "eva-store",
-      "database_id": "e45faebc-0ae8-422e-a20b-0c0525b4e8db"
+      "database_name": "sport-store",
+      "database_id": "PLACEHOLDER_WILL_CREATE"
     }
   ],
   "vars": {
-    "STORE_ORIGIN": "https://www.eva-store.workers.dev"
+    "STORE_ORIGIN": "https://sport.workers.dev"
   }
 }
