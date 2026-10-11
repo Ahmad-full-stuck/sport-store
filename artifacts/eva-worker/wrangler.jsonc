@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "www",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "../eva-fabrics-store/dist/public",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/media/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "eva-store",
+      "database_id": "e45faebc-0ae8-422e-a20b-0c0525b4e8db"
+    }
+  ],
+  "vars": {
+    "STORE_ORIGIN": "https://www.eva-store.workers.dev"
+  }
+}
